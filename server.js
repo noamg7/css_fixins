@@ -5,6 +5,8 @@ server.get('/', function(req, res){
   res.sendFile('html/index.html', { root: __dirname });
 });
 
+server.use(express.static(__dirname+"/css"));
+
 server.get('/about', function(req, res){
   res.sendFile('html/about.html', { root: __dirname });
 });
